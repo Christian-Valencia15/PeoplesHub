@@ -1,0 +1,7 @@
+{
+  "name": "PeoplesHub",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
