@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PeoplesHub - Display Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>📋 Submitted Information</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-list>
+        <!-- Basic Info -->
+        <ion-item-divider>
+          <ion-label>Basic Info</ion-label>
+        </ion-item-divider>
+        <ion-item><ion-label>Lastname:</ion-label> {{ formData.lastname }}</ion-item>
+        <ion-item><ion-label>Suffix:</ion-label> {{ formData.suffix }}</ion-item>
+        <ion-item><ion-label>Firstname:</ion-label> {{ formData.firstname }}</ion-item>
+        <ion-item><ion-label>Middle Initial:</ion-label> {{ formData.middleInitial }}</ion-item>
+        <ion-item><ion-label>Birthdate:</ion-label> {{ formData.birthdate }}</ion-item>
+        <ion-item><ion-label>Gender:</ion-label> {{ formData.gender }}</ion-item>
+        <ion-item><ion-label>Age:</ion-label> {{ formData.age }}</ion-item>
+        <ion-item><ion-label>Marital Status:</ion-label> {{ formData.maritalStatus }}</ion-item>
+        <ion-item><ion-label>Ethnicity:</ion-label> {{ formData.ethnicity }}</ion-item>
+
+        <!-- Address -->
+        <ion-item-divider>
+          <ion-label>Address</ion-label>
+        </ion-item-divider>
+        <ion-item><ion-label>Current Address:</ion-label> {{ formData.currentAddress }}</ion-item>
+        <ion-item><ion-label>Permanent Address:</ion-label> {{ formData.permanentAddress }}</ion-item>
+
+        <!-- Contact Information -->
+        <ion-item-divider>
+          <ion-label>Contact Information</ion-label>
+        </ion-item-divider>
+        <ion-item><ion-label>Mobile Number:</ion-label> {{ formData.mobileNumber }}</ion-item>
+        <ion-item><ion-label>Home Phone:</ion-label> {{ formData.homePhone }}</ion-item>
+        <ion-item><ion-label>Email:</ion-label> {{ formData.email }}</ion-item>
+        <ion-item><ion-label>Social Media:</ion-label> <a [href]="formData.socialMedia">{{ formData.socialMedia }}</a></ion-item>
+        <ion-item><ion-label>LinkedIn:</ion-label> <a [href]="formData.linkedin">{{ formData.linkedin }}</a></ion-item>
+
+        <!-- More fields can be added here similarly -->
+      </ion-list>
+
+      <div class="ion-padding-top">
+        <ion-button expand="full" (click)="edit()">Edit</ion-button>
+        <ion-button expand="full" color="medium" (click)="goBackToLogin()">Go Back to Login</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
